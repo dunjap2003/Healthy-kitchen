@@ -1,0 +1,277 @@
+body{
+   background-color: lightpink;
+}
+
+.container{
+   display: grid;
+   height: 100vh;
+   overflow-x: initial !important;
+   column-gap: 2px;
+   row-gap: 1px;
+}
+
+.container div{
+   gap: 0.66vh;
+   padding: 0.66vh;
+}
+
+.item{
+   display: grid;
+   justify-items:center;
+   border:0.53vh solid deeppink;
+}
+
+.item div{
+   border: 1.33vh;
+   border-color:deeppink;
+}
+
+#logo{
+   grid-column: 1 / span 1;
+   grid-row: 1 / span 1;
+   height: 9.95vh;
+   align-self:center;
+}
+
+#kat{
+   display:flex;
+   justify-content: center;
+   align-items:center;
+   grid-column: 2 / span 2;
+   grid-row: 1 / span 1;
+}
+
+#naslov{
+   grid-column: 2 / span 2;
+   grid-row: 1 / span 1;
+   font-family: 'Courier-New', 'Courier New', Courier, monospace;
+   font-size: 6.63vh;
+   font-weight: bolder;
+   color:deeppink;
+}
+
+#kosarica{
+   grid-column: 4 / span 2;
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+}
+
+#cart{
+   height: 6.63vh;
+}
+
+#povecalo{
+   height: 6.63vh;
+}
+
+#brojacUkupno{
+   font-size:1.2rem;
+   font-family:'Courier New', Courier, monospace;
+   font-weight:bolder;
+   color:deeppink;
+   position:absolute;
+   left:46%;
+   top:60%;
+}
+
+#navigacija{
+   grid-column: 1 / span 1;
+   grid-row: 2 / span 8;
+   font-size:0;
+   white-space: nowrap;
+}
+
+.button{
+   justify-self:center;
+   background-color:deeppink;
+   color:lightpink;
+   font-size: 15px;
+   font-family:'Courier New', Courier, monospace;
+   font-weight: bolder;
+   border: 0.25vh solid deeppink;
+   width:100%;
+}
+
+.form{
+   display:flex;
+   justify-self: center;
+   background-color: deeppink;
+   color:lightpink;
+   width: 100%;
+   align-content:center;
+}
+
+#section1{
+   display:flex;
+   grid-row: 2 / span 2;
+   grid-column: 2 / span 2;
+   background-color: lightpink;
+   background-image: url('../images/naslovna.jpg');
+   background-size:cover;
+   justify-content: left;
+   font-family:'Courier New', Courier, monospace;
+   font-weight:bolder;
+   font-size: 6vh;
+   color:deeppink;
+}
+
+#section2{
+   display:inline-block;
+   grid-row: 4 / span 7;
+   grid-column: 2 / span 2;
+   border:0.53vh solid deeppink;
+}
+
+.divic{
+   display:inline-block;
+   width: 15rem;
+   font-family:'Courier New', Courier, monospace;
+   font-weight:bolder;
+   font-size: 1.5rem;
+   color:deeppink;
+   border: none;
+   text-align:center;
+   position: relative;
+}
+
+.opis{
+   margin-top:2px;
+   margin-bottom:2px;
+}
+
+.divic>img{
+   width:95%;
+}
+
+.add{
+   display:none;
+   position:absolute;
+   top:30%;
+   left:38%;
+   background-color:transparent;
+   border:0px;
+}
+
+.brArt{
+   position:absolute;
+   top:50%;
+   left:85%;
+   font:20px;
+   font-weight:bolder;
+   color:black;
+}
+
+#slikaKosarice{
+   height:3rem;
+   width:3rem;
+}
+
+.divic:hover .add{
+   display:block;
+}
+
+#aside{
+   line-height:0vmin;
+   color:deeppink;
+   font-family: 'Courier New', Courier, monospace;
+   font-weight:bold;
+   font-size:18px;
+   padding:10px;
+   column-gap: 5px;
+}
+
+@media all and (max-width: 1024px) {
+   .container{
+      height:100vh;
+   }
+
+   #logo{
+      white-space:nowrap;
+      display:block;
+      grid-column: 1 / span 10;
+      grid-row: 1 / span 1;
+   }
+
+   #kat{
+      grid-column: 1 / span 8;
+      grid-row: 2 / span 1;
+      white-space:nowrap;
+   }
+
+   #naslov{
+      font-size: 4vh;
+      text-align: center;
+      display:inline-block;
+      grid-column: 1 / span 7;
+      grid-row: 2 / span 1;
+   }
+
+   #kosarica{
+      white-space:nowrap;
+      display:inline-block;
+      text-align: center;
+      grid-column: 9 / span 2;
+      grid-row: 2 / span 1;
+   }
+
+   #povecalo{
+      white-space:nowrap;
+   }
+
+   #cart{
+      white-space:nowrap;
+   }
+
+   #section1{
+      white-space:nowrap;
+      font-size:x-large;
+      display:inline-block;
+      text-align:center;
+      grid-column: 1 / span 10;
+      grid-row: 3 / span 3;
+   }
+
+   #navigacija{
+      grid-column: 1 / span 1;
+      grid-row: 6 / span 6;
+   }
+
+   #slikaKosarice{
+      height:2.5rem;
+      width:2.5rem;
+   }
+
+   .add{
+      display:none;
+      position:absolute;
+      top:30%;
+      left:40%;
+      background-color:transparent;
+      border:0px;
+   }
+
+   .button{
+      text-align:center;
+      font-size:0.7rem;
+      width:100%;
+   }
+
+   #section2{
+      display:inline-block;
+      grid-column: 2 / span 9;
+      grid-row: 6 / span 9;
+   }
+
+   #divic{
+      width:10rem;
+      font-size: medium;
+   }
+
+   #aside{
+      grid-column: 1 / span 1;
+      grid-row: 12 / span 1;
+      font-size: 12px;
+   }
+}
