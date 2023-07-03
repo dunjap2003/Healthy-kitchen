@@ -1,0 +1,257 @@
+body{
+   background-color:lightpink;
+   overflow-x:hidden;
+   overflow-y: auto;
+}
+
+.container{
+   display: grid;
+   height: 90vh;
+   overflow-x: initial !important;
+   column-gap: 2px;
+   row-gap: 1px;
+}
+
+.container div{
+   gap: 0.66vh;
+   padding: 0.66vh;
+}
+
+.item{
+   display: grid;
+   justify-items:center;
+   border:0.53vh solid deeppink;
+}
+
+.item div{
+   border: 1.33vh;
+   border-color:deeppink;
+}
+
+#logo{
+   grid-column: 1 / span 1;
+   grid-row: 1 / span 1;
+   height: 7rem;
+   align-self:center;
+}
+
+#kat{
+   display:flex;
+   justify-content: center;
+   align-items: center;
+}
+
+#naslov{
+   grid-column: 2 / span 1;
+   grid-row: 1 / span 1;
+   font-family: 'Courier-New', 'Courier New', Courier, monospace;
+   font-size: 3rem;
+   font-weight: bolder;
+   color:deeppink;
+}
+
+#kosarica{
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+}
+
+#cart{
+   height: 10vh;
+}
+
+#povecalo{
+   height: 10vh;
+}
+
+#sadrzajKosarice{
+   display:flex;
+   flex-direction:column;
+   position:relative;
+   grid-column: 1 / span 3;
+   grid-row: 2 / span 9;
+   height: auto;
+   border:0px;
+}
+
+#brojacUkupno{
+   font-size:1.5rem;
+   font-family:'Courier New', Courier, monospace;
+   font-weight:bolder;
+   color:deeppink;
+   position:absolute;
+   left:46%;
+   top:60%;
+}
+
+#naslovKosarice{
+   color:deeppink;
+   font-family:'Courier New', Courier, monospace;
+   font-weight:bolder;
+   font-size:2rem;
+   overflow: auto;
+}
+
+#nazivProizvodaKosarica{
+   position:absolute;
+   top:15%;
+   left:25%;
+   display:inline;
+   color:deeppink;
+   font-family:'Courier New', Courier, monospace;
+   font-weight: bolder;
+   font-size:1.75rem;
+}
+
+#kolicinaProizvodaKosarica{
+   position:absolute;
+   top:15%;
+   right:27%;
+   display:inline;
+   color:deeppink;
+   font-family:'Courier New', Courier, monospace;
+   font-weight: bolder;
+   font-size:1.75rem;
+}
+
+#proizvodi{
+   display:inline-block;
+   position:absolute;
+   top:17%;
+   left:1%;
+   height:auto;
+   width:98%;
+   overflow:auto;
+}
+
+#pojedinacniProizvod{
+   display:flex;
+   color:deeppink;
+   font-family:'Courier New', Courier, monospace;
+   font-weight:bolder;
+   text-align:center;
+   position:relative;
+   justify-content:center;
+   margin:20px;
+}
+
+.ime{
+   position:absolute;
+   left:26%;
+   font-size:1.5rem;
+}
+
+.korekcijaPlus{
+   position:absolute;
+   right:25%;
+   background-color: deeppink;
+   font-family: 'Courier New', Courier, monospace;
+   color:lightpink;
+   border:0px;
+}
+
+.korekcijaMinus{
+   position:absolute;
+   right:35%;
+   background-color: deeppink;
+   font-family: 'Courier New', Courier, monospace;
+   color:lightpink;
+   border:0px;
+}
+
+.kolicina{
+   position:absolute;
+   right:30%;
+
+}
+
+@media all and (max-width: 1024px) {
+   body{
+      overflow-y: auto;
+   }
+   
+   #logo{
+      white-space:nowrap;
+      display:block;
+      grid-column: 1 / span 10;
+      grid-row: 1 / span 1;
+   }
+
+   #kat{
+      grid-column: 1 / span 7;
+      grid-row: 2 / span 1;
+      white-space:nowrap;
+   }
+
+   #naslov{
+      font-size:1.5rem;
+      text-align: center;
+      display:inline-block;
+      grid-column: 1 / span 7;
+      grid-row: 2 / span 1;
+   }
+
+   #kosarica{
+      white-space:nowrap;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      grid-column: 8 / span 2;
+      grid-row: 2 / span 1;
+   }
+
+   #povecalo{
+      white-space:nowrap;
+      height:7vh;
+   }
+
+   #cart{
+      white-space:nowrap;
+      height:7vh;
+   }
+
+   #brojacUkupno{
+      font-size:1rem;
+   }
+
+   #sadrzajKosarice{
+      position:relative;
+      min-height:0;
+      grid-column: 1 / span 9;
+      grid-row: 3 / span 9;
+   }
+
+   #naslovKosarice{
+      grid-column: 2 / span 2;
+      grid-row:1/span1;
+      white-space:nowrap;
+      color:deeppink;
+      font-family:'Courier New', Courier, monospace;
+      font-weight:bolder;
+      font-size:1rem;
+      height:2rem;
+   }
+   
+   #nazivProizvodaKosarica{
+      position:absolute;
+      display:inline;
+      color:deeppink;
+      font-family:'Courier New', Courier, monospace;
+      font-weight: bolder;
+      font-size:0.9rem;
+   }
+   
+   #kolicinaProizvodaKosarica{
+      position:absolute;
+      display:inline;
+      color:deeppink;
+      font-family:'Courier New', Courier, monospace;
+      font-weight: bolder;
+      font-size:0.9rem;
+   }
+
+   .ime{
+      font-size:0.8rem;
+   }
+}
